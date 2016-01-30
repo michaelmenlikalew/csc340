@@ -1,0 +1,65 @@
+/* Shwe Aye
+ * 915827905
+ * saye@mail.sfsu.edu
+ * Assignment 5 Part 1
+ * Oct. 22, 2015
+ * I used g++ compiler on Linux(GNU)/Unix.
+ *
+ * Question: For each snippet of code given below, indicate precisely how many
+ * times each line runs in terms of the variables given. Sometimes, you will be
+ * able to give an exact integral answer, like "10". Other times, your answer
+ * will be in terms of n or some other variable or combination of variables. If
+ * the snippet of code is a method, you do not have to write the number of 
+ * timesthe top line (the method declaration itself) is executed.
+ */
+
+Q1.
+double sum_triples(double array[], int n)
+{
+    //n: size of the array. Assume n is divisible by 3
+    double sum = 0; // 1 time 
+
+    for (int i = 0; i < n; i += 3) // n/3 + 1
+        sum = sum + array[i]; // n/3
+    return sum; // 1
+}
+
+Q2.
+double sum_exponentials(int n) //n is a power of 2, i.e., n=2k or k=log2n
+{
+    int sum=0; // 1 time
+
+    for (int i = 1; i < n; i *= 2) // logn + 1
+        sum = sum + i; // logn
+    return sum; // 1
+}
+
+Q3.
+for (int i = 0; i < 10; i++) // 11
+    for (int j = 0; j < n; j++) // 10n + 10
+        cout << i << “,” << j << endl; // 10n
+
+Q4.
+for (int i = 0; i < n; i++) // n + 1
+    for (int j = 0; j < n; j++) // n^2 + n
+        cout << i << “,” << j << endl; // n^2
+
+Q5.
+//assume n is divisible by 2
+for (int i = 0; i < n; i++) // n + 1
+    for (int j = n/2; j > i; j--) // n * (1/4 (n/2 + 5))
+        sum = i+j; // n * (1/4 (n/2 + 1))
+
+Q6.
+double sum_matrix(double matrix[][], int m, int n)
+{
+//m: num of rows; n: num of cols
+    double sum = 0; // 1
+
+    for (int i = m - 1; i >= 0; i--) { // m + 1
+        for (int j = n - 1; j >= 0; j--) { // nm + m
+            sum = sum + matrix[i][j]; // m * n
+        }
+    }
+    return sum; // 1
+}
