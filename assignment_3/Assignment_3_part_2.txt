@@ -1,0 +1,73 @@
+/* Shwe Aye
+ * 915827905
+ * saye@mail.sfsu.edu
+ * Assignment 3 Part 2
+ * Oct. 5, 2015
+ * I used g++ compiler on Linux(GNU)/Unix.
+ *
+ * Given
+ * . P={p_1, p_2, ..., p_m}, the set of products available at a local grocery
+ * store;
+ * . D={T_1, T_2, ..., T_N}, the set of transactions that were completed at this
+ * store in the past year, where each T_i (i in [1,N]) is a subset of P;
+ *  . min_freq, a user-specified parameter (e.g., 5%).
+ * 
+ * A product is said to be frequent if it occurs in at least min_freq of the
+ * transactions in D. By the same token, a pair of products is said to be
+ * frequent if it occurs in at least min_freq of the transactions in D. Also,
+ * it's straightforward to prove the following claim: if a product is not
+ * frequent, none of the pairs that involve this product will be frequent. Use
+ * this claim to
+ * design an algorithm to find all the frequent products and frequent product
+ * pairs in D. Represent your algorithm in pseudo code.
+ */
+
+struct Pair {
+    int other = -1;
+}
+
+int main()
+{
+    // bool freq[m];
+    // Pair freq_pair[n];
+
+    // start i and j at 0
+    //FOR each i in P {
+        //FOR each j in D {
+            //IF P[i] contain in D[j] && P >= min_freq {
+                // freq[i] = true;
+            }END IF
+        }END FOR
+    }END FOR
+
+    // i = j = k = 0
+    //FOR each i in freq {
+        //FOR each j in freq {
+            //FOR each k in D {
+                //IF freq[i] is true && freq[j] is true &&
+                  P[i] and P[j] contain in D[k] 
+                    // freq_pair[i].other = j;
+                    // freq_pair[j].other = i;
+                    // freq_pair[i] = true;
+                    // freq_pair[j] = true;
+                //END IF
+            //END FOR
+        //END FOR
+    //END FOR
+
+    // i = 0
+    //FOR each i on freq {
+        //IF freq[i] is true
+            // print freq[i] is frequent
+        //END IF
+    //END FOR
+
+    //FOR each i in freq {
+        //IF freq_pair[i] is true
+           // tmp = freq_pair[i].other;
+           // print freq_pair[i] is frequnt pair with freq_pair[tmp];
+        //END IF
+    //END FOR
+    
+    return 0;
+}

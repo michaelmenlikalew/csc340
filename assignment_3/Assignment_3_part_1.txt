@@ -1,0 +1,61 @@
+/* Shwe Aye
+ * 915827905
+ * saye@mail.sfsu.edu
+ * Assignment 3 Part 1
+ * Oct. 5, 2015
+ * I used g++ compiler on Linux(GNU)/Unix.
+ *
+ * Problem 1 :Given an article such as this one at nytimes.com, design an
+ * algorithm to find the most frequently co-occurring word-pair in this article.
+ * Two words are said to co-occur if they appear in the same sentence. You can
+ * assume you have access to a subroutine, sentenceSplitter(article), that can
+ * accurately segment an article into separate sentences. Please describe your
+ * algorithm unambiguously using pseudo code with necessary comments in English.
+ * Assume you start with an "article" variable that already contains the full
+ * text of an article.
+ */
+
+struct WordBag{
+    // string word
+    // integer count
+    void traverse(string tmp);
+};
+
+WordBag find_max(const WordBag& tmp)
+{
+    // int max = 0;
+    //FOR each index on the array
+        //IF count of tmp is greater than max,
+            // max = equal to count
+        //END IF
+    //END FOR
+    return tmp[max];
+}
+
+int main()
+{
+    // WordBag coccur_word[] (hold co-ocurring word)
+
+    //WHILE not end of file {
+        // string line = sentenceSplitter(article);
+        // make temporary array of WordBag named tmp_bag
+        //WHILE not end of line {
+           // seperate each word and find the word in tmp_bag
+           //IF word can't be find in array
+               // put them into array
+           //ELSE
+               // increment the count of tmp_bag
+        //}END WHILE
+        // call function find_max(tmp_bag);
+        // append that into coccur_word array.
+    //}END WHILE
+
+    // make temp_index and index and set it to 0
+    //FOR each index on the array
+        //IF number of count of coccur_word at index is greater than temp_index
+            // temp_index is equal to number of count of array at index
+        //END IF
+    //END FOR
+    
+    // print coccur_word at index temp_index which has the most freq of array  
+}
